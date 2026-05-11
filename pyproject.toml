@@ -1,0 +1,23 @@
+[project]
+name = "pygame-cadence"
+version = "0.1.0"
+description = "Schematic editor with a tkinter command window and a pygame canvas."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "command_window", "schematic_window", "interpreter", "graphics_api", "document", "command_context", "command_history", "text_editing", "transcript"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers"
